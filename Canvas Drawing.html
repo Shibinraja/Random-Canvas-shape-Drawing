@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing</title>
+    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <style type="text/css">
+        .btn-spacing 
+        {
+        margin-right: 258px;
+        margin-bottom: 5px !important;
+        }   
+        
+        #canvas {
+            border:1px solid #000000;
+            border-radius: 35px;
+            width:50%;
+            height:50%;
+            margin-left:25%;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin:5%">
+        <button type="button" class="btn btn-success btn-spacing" id = "draw" onclick = 'draw()' onclientclick = "if (!draw()) {return false;}">Draw</button>
+        <button type="button" class="btn btn-warning btn-spacing" id = "left" onclick = 'movement("left")'>Shift Left</button>
+        <button type="button" class="btn btn-warning btn-spacing" id = "right" onclick = 'movement("right")'>Shift Right</button>
+        <button type="button" class="btn btn-danger btn-spacing" id = "delete" onclick = "deleted()" onclientclick = "if (!deleted()) {return false;}">Delete</button>
+    </div>
+    <canvas id = 'canvas'></canvas>
+
+    <script type = "text/javascript" src = "Canvas.js"></script>
+</body>
+</html>
